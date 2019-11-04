@@ -2,6 +2,11 @@
 
 I have compiled some basic JavaScript language questions so developers can test their knowledge, and also learn some nuances of the language from the detailed answers to each question.
 
+## A few notes about the code
+- Assuming ECMAScript 6
+- Every snippet is run as a global code
+- The code is not running in strict mode.
+
 ### 1. What is the result of:
 
 ```javascript
@@ -30,8 +35,8 @@ num += num++
 
 ```javascript
 (function () {
-  var num1 = 10
-  var num2 = 20
+  let num1 = 10
+  let num2 = 20
 
   return sum()
 
