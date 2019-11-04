@@ -67,8 +67,8 @@ Como o valor retornado da operação `num++` foi `'10'`, nosso operador de atrib
 
 ```javascript
 (function () {
-  var num1 = 10
-  var num2 = 20
+  let num1 = 10
+  let num2 = 20
 
   return sum()
 
@@ -88,8 +88,8 @@ E exatamente isso que acontece no código em questão. Quando a <a href="https:/
 
 ```javascript
 (function () {
-  var num1 = 10
-  var num2 = 20
+  let num1 = 10
+  let num2 = 20
   function sum() {
     return num1 + num2
   }
