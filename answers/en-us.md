@@ -73,8 +73,8 @@ Since the value returned from the `num++` operation was `'10'`, our addition ass
 
 ```javascript
 (function () {
-  var num1 = 10
-  var num2 = 20
+  let num1 = 10
+  let num2 = 20
 
   return sum()
 
@@ -94,8 +94,8 @@ This is exactly what happens in the code in question. When the <a href="https://
 
 ```javascript
 (function () {
-  var num1 = 10
-  var num2 = 20
+  let num1 = 10
+  let num2 = 20
   function sum() {
     return num1 + num2
   }
