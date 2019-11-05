@@ -19,7 +19,7 @@ Binária: `x + y`
 
 Na forma unária ele vai tentar converter o operando para um número:
 
-```+'1' = 1```
+```+'1' === 1```
 
 Na forma binária ele vai somar os dois operandos, se ambos forem números, `1 + 3 // result 4`, e se um dos operandos for do tipo string, ele vai converter o outro operando para string e depois vai concatena-los:
 
@@ -27,9 +27,9 @@ Na forma binária ele vai somar os dois operandos, se ambos forem números, `1 +
 
 No caso do trecho `'a'+ +'a'`, tanto a operação unária como a operação binária estão sendo executadas.
 
-Primeiro ele executara a operação unária que tem maior precedência `+'a'`, assim, vai tentar converter a string `'a'` para um número, resultando no valor `NaN`, porque a string `a` não um valor numérico válido.
+Primeiro ele executara a operação unária que tem maior precedência `+'a'`, assim, vai tentar converter a string `'a'` para um número, resultando no valor `NaN`, porque a string `'a'` não um valor numérico válido.
 
-Logo após isso, ele vai executar a operação binaria `'b' + NaN`, nesse caso como um dos operandos é uma string ele vai tentar converter o outro operando para uma string, nesse caso, o valor `NaN`, o que vai resultar em uma string `'NaN'`. Assim, quando executamos `'b'+'a'+ +'a'+'a'`, isso é oque acontece realmente:
+Logo após isso, ele vai executar a operação binaria `'a' + NaN`, nesse caso como um dos operandos é uma string ele vai tentar converter o outro operando para uma string, nesse caso, o valor `NaN`, o que vai resultar em uma string `'NaN'`. Assim, quando executamos `'b'+'a'+ +'a'+'a'`, isso é oque acontece realmente:
 
 ```'b'+'a'+'NaN'+'a'```
 
