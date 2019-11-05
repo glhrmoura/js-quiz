@@ -29,7 +29,13 @@ No caso do trecho `'a'+ +'a'`, tanto a operação unária como a operação bin�
 
 Primeiro ele executara a operação unária que tem maior precedência `+'a'`, assim, vai tentar converter a string `'a'` para um número, resultando no valor `NaN`, porque a string `'a'` não um valor numérico válido.
 
-Logo após isso, ele vai executar a operação binaria `'a' + NaN`, nesse caso como um dos operandos é uma string ele vai tentar converter o outro operando para uma string, nesse caso, o valor `NaN`, o que vai resultar em uma string `'NaN'`. Assim, quando executamos `'b'+'a'+ +'a'+'a'`, isso é oque acontece realmente:
+Logo após isso, ele vai executar a operação binaria `'a' + NaN`, nesse caso como um dos operandos é uma string ele vai tentar converter o outro operando para uma string, nesse caso, o valor `NaN`, o que vai resultar em uma string `'NaN'`.
+
+Assim, quando executamos:
+
+`'b'+'a'+ +'a'+'a'`
+
+Isso é oque realmente acontece:
 
 ```'b'+'a'+'NaN'+'a'```
 
