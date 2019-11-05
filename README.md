@@ -2,6 +2,8 @@
 
 I have compiled some basic JavaScript language questions so developers can test their knowledge, and also learn some nuances of the language from the detailed answers to each question.
 
+The repository is open to contributions, whether new questions or even translations of answers into other languages.
+
 ## A few notes about the code
 - Assuming ECMAScript 6
 - Every snippet is run as a global code
