@@ -162,6 +162,6 @@ let card = {};
 
 **b)** `{ audi: undefined, bmw: undefined }`</br>
 
-Uma das formas mais comuns de fazer atribuição dinâmica em um objeto javascript é através da notação de colchetes, dessa maneira é possível inserir valor a um atributo de forma dinâmica out até criar um atributo que ainda não existe no objeto.
+Uma das formas mais comuns de fazer atribuição dinâmica em um objeto javascript é através da notação de colchetes, dessa maneira é possível inserir valor a um atributo de forma dinâmica ou até criar um atributo que ainda não existe no objeto.
 
-Nesse caso mesmo identificando o valor como undefined o objeto irá marcar esses atributos como próprios do objeto ficando a mostra de forma explícita no objeto. Isso é bastante comum quando queremos que o objeto tenha um conjunto de propriedades.
+Nesse caso mesmo identificando o valor como `undefined` o objeto irá marcar esses atributos como próprios do objeto ficando a mostra de forma explícita no objeto. Isso é bastante comum quando queremos que o objeto tenha um conjunto de propriedades.
