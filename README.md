@@ -86,7 +86,7 @@ console.log('log 2: ', firstName, lastName)
 ```javascript
 let card = {};
 
-['audi','bmw'].map(item => card[item] = undefined);
+(['audi','bmw'].map(item => card[item] = undefined), card);
 ```
 
 **a)** `{}`</br>

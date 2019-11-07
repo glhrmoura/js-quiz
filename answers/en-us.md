@@ -163,7 +163,7 @@ Here there are two operands: the number `3` and the result of the `5 - 3` subtra
 ```javascript
 let card = {};
 
-['audi','bmw'].map(item => card[item] = undefined);
+(['audi','bmw'].map(item => card[item] = undefined), card);
 ```
 
 **b)** `{ audi: undefined, bmw: undefined }`</br>

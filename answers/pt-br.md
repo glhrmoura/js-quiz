@@ -157,7 +157,7 @@ Aqui existem dois operandos: o número `3` e o resultado da operação de subtra
 ```javascript
 let card = {};
 
-['audi','bmw'].map(item => card[item] = undefined);
+(['audi','bmw'].map(item => card[item] = undefined), card);
 ```
 
 **b)** `{ audi: undefined, bmw: undefined }`</br>
