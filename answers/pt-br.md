@@ -157,3 +157,17 @@ São criadas duas variáveis globais: `firstName` e `lastName`. Podendo ser aces
 Olhando rapidademente podemos pensar que a operação esta pegando `3.5` subtratindo `3` e multiplicando por `2`. Mas se olharmos atentamente, o que separa o `3` do `5` não é um ponto flutuante, mas sim, o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Virgula" target="_blank">operador de vírgula</a>. Esse operador avalia todos os seus operandos e retorna o ultimo deles.
 
 Aqui existem dois operandos: o número `3` e o resultado da operação de subtração `5 - 3`. Será retornado o valor `2`, que é o resultado da subtração. Esse valor será multiplicado por `2` gerando o valor `4` como resultado final.
+
+### Questão 6:
+
+```javascript
+let card = {};
+
+(['audi','bmw'].map(item => card[item] = undefined), card);
+```
+
+**b)** `{ audi: undefined, bmw: undefined }`</br>
+
+Uma das formas mais comuns de fazer atribuição dinâmica em um objeto javascript é através da notação de colchetes, dessa maneira é possível inserir valor a um atributo de forma dinâmica ou até criar um atributo que ainda não existe no objeto.
+
+Nesse caso mesmo identificando o valor como `undefined` o objeto irá marcar esses atributos como próprios do objeto ficando a mostra de forma explícita no objeto. Isso é bastante comum quando queremos que o objeto tenha um conjunto de propriedades.

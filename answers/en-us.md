@@ -157,3 +157,17 @@ Two global variables are created: `firstName` and `lastName`. They can be access
 Looking quickly we can think that the operation is taking `3.5` subtracting `3` and multiplying by `2`. But if we look closely, what separates `3` from `5` is not a floating point, but the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator" target="_blank">comma operator</a>. This operator evaluates all its operands and returns the last of them.
 
 Here there are two operands: the number `3` and the result of the `5 - 3` subtraction operation. The value `2` will be returned, which is the result of the subtraction. This value will be multiplied by `2` giving the value `4` as the final result.
+
+### Question 6:
+
+```javascript
+let card = {};
+
+(['audi','bmw'].map(item => card[item] = undefined), card);
+```
+
+**b)** `{ audi: undefined, bmw: undefined }`</br>
+
+One of the most common ways to dynamically assign a javascript object is through square bracket notation, so you can dynamically insert value into an attribute until you create an attribute that does not already exist in the object.
+
+In this case even identifying the value as undefined, the object will mark these attributes as proper to the object and will be explicitly displayed on the object. This is quite common when we want the object to have a set of properties.

@@ -83,6 +83,19 @@ console.log('log 2: ', firstName, lastName)
 **c)** `1`</br>
 **d)** `4`</br>
 
+### 6. What is the value of the object?
+
+```javascript
+let card = {};
+
+(['audi','bmw'].map(item => card[item] = undefined), card);
+```
+
+**a)** `{}`</br>
+**b)** `{ audi: undefined, bmw: undefined }`</br>
+**c)** `['audi','bmw']`</br>
+**d)** `[{ audi: undefined }, { bmw: undefined }]`</br>
+
 ## Check out the answers:
 
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/pt-br.md" target="_blank">pt-BR</a>
