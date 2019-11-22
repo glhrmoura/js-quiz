@@ -96,6 +96,18 @@ let card = {};
 **c)** `['audi','bmw']`</br>
 **d)** `[{ audi: undefined }, { bmw: undefined }]`</br>
 
+
+### 7. What is the result of:
+
+```javascript
+Object.prototype.toString.call([1, 2, 3, 4, 5])
+```
+
+**a)** `[object Array]`</br>
+**b)** `'1,2,3,4,5'`</br>
+**c)** `undefined`</br>
+**d)** `[object Object]`</br>
+
 ## Check the detailed answers to each question :pencil:
 
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/pt-br.md" target="_blank">pt-BR</a>
