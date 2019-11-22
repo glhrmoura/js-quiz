@@ -103,10 +103,10 @@ let card = {};
 Object.prototype.toString.call([1, 2, 3, 4, 5])
 ```
 
-**a)** `[object Array]`</br>
+**a)** `'[object Array]'`</br>
 **b)** `'1,2,3,4,5'`</br>
 **c)** `undefined`</br>
-**d)** `[object Object]`</br>
+**d)** `'[object Object]'`</br>
 
 ## Check the detailed answers to each question :pencil:
 
