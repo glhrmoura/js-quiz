@@ -96,7 +96,7 @@ let card = {};
 **c)** `['audi','bmw']`</br>
 **d)** `[{ audi: undefined }, { bmw: undefined }]`</br>
 
-## Check out the answers:
+## Check the detailed answers to each question :pencil:
 
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/pt-br.md" target="_blank">pt-BR</a>
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/en-us.md" target="_blank">en-US</a>
