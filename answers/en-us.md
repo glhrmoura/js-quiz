@@ -171,3 +171,42 @@ let card = {};
 One of the most common ways to dynamically assign a javascript object is through square bracket notation, so you can dynamically insert value into an attribute until you create an attribute that does not already exist in the object.
 
 In this case even identifying the value as undefined, the object will mark these attributes as proper to the object and will be explicitly displayed on the object. This is quite common when we want the object to have a set of properties.
+
+### Question 7:
+
+```javascript
+Object.prototype.toString.call([1, 2, 3, 4, 5])
+```
+
+**a)** `[object Array]`</br>
+
+Letter **b**! If you didn't get this question right then that was probably your answer, assuming that if the `toString` method is running with `this` pointing to an `Array`, it will have the same behavior as the call to `[1 , 2, 3, 4, 5].toString() // '1,2,3,4,5`. However, despite the methods <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/ToString">`Object.prototype.toString`</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString">`Array.prototype.toString`</a> have the same nomenclature, underneath the cloth they have very distinct behaviors.
+
+Both <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString">`Array.prototype.toString`</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/ToString">`Object.prototype.toString`</a> follow these steps when they are executed. I will list the steps in a more abstract way (more abstract than the specification), and using JS own syntax to simplify things.
+
+`Array.prototype.toString`:
+
+- The `array` variable will receive the value of `this` converted to object.
+- The variable `func` will get the value of `array ['join'] `
+- Here it is checked if `func` is a function
+  - If not, the `func` variable will get the value of` Object.prototype.toString`
+- Will be returned `func.call (array)`
+
+`Object.prototype.toString`:
+
+> I will skip a few steps so that we can focus only on what is most important to this case.
+
+- The `obj` variable will receive the value of `this` converted to object.
+- Here a series of checks will be made regarding the type of the variable `obj`
+  - If the variable `obj` is of type` Array`, the variable `tag` will receive `'Array'`
+  - If not, if the `obj` variable is a function, the` tag` variable will receive `'Function'`
+  - If not, if the `obj` variable is an error, the` tag` variable will receive `'Error'`
+  - If not, if the `obj` variable is a Boolean, the` tag` variable will receive `'Boolean'`
+  - If not, if the `obj` variable is a numeric value, the` tag` variable will receive `'Number'`
+  - If not, if the `obj` variable is a string, the` tag` variable will receive `'String'`
+  - If not, if the `obj` variable is a value of type date, the` tag` variable will receive `'Date'`
+  - If not, if the `obj` variable is a regular expression, the` tag` variable will receive `'RegExp'`
+  - If not, the `tag` variable will receive the value `'Object'`
+- After all checks, the value `'[object' + tag + ']'` will be returned
+
+In the example from 7th question, the `Object.prototype.toString` method is executed with a` this` of type `Array`, so it fell on the first `If` and assigned the value `Array` to the variable `tag` . Finally, it returned the string `'[object' + tag + ']'`.
