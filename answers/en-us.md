@@ -211,7 +211,7 @@ Both <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 
 In the example from 7th question, the `Object.prototype.toString` method is executed with a` this` of type `Array`, so it fell on the first `If` and assigned the value `Array` to the variable `tag` . Finally, it returned the string `'[object' + tag + ']'`.
 
-### Questão 8:
+### Question 8:
 
 ```javascript
 let john = { name: 'John' }
