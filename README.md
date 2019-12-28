@@ -86,16 +86,15 @@ console.log('log 2: ', firstName, lastName)
 ### 6. What is the value of the object?
 
 ```javascript
-let card = {};
+let card = {}
 
-(['audi','bmw'].map(item => card[item] = undefined), card);
+(['audi','bmw'].map(item => card[item] = undefined), card)
 ```
 
 **a)** `{}`</br>
 **b)** `{ audi: undefined, bmw: undefined }`</br>
 **c)** `['audi','bmw']`</br>
 **d)** `[{ audi: undefined }, { bmw: undefined }]`</br>
-
 
 ### 7. What is the result of:
 
@@ -107,6 +106,22 @@ Object.prototype.toString.call([1, 2, 3, 4, 5])
 **b)** `'1,2,3,4,5'`</br>
 **c)** `undefined`</br>
 **d)** `'[object Object]'`</br>
+
+### 8. What is the result of:
+
+```javascript
+let john = { name: 'John' }
+let array = [john]
+
+john = null
+
+array[0].name
+```
+
+**a)** `TypeError`</br>
+**b)** `null`</br>
+**c)** `'John'`</br>
+**d)** `undefined`</br>
 
 ## Check the detailed answers to each question :pencil:
 

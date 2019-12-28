@@ -210,3 +210,53 @@ Both <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 - After all checks, the value `'[object' + tag + ']'` will be returned
 
 In the example from 7th question, the `Object.prototype.toString` method is executed with a` this` of type `Array`, so it fell on the first `If` and assigned the value `Array` to the variable `tag` . Finally, it returned the string `'[object' + tag + ']'`.
+
+### Questão 8:
+
+```javascript
+let john = { name: 'John' }
+let array = [john]
+
+john = null
+
+array[0].name
+```
+**c)** `'John'`</br>
+
+When we instantiate an object and assign it to a variable, in fact what will be stored in that variable is not an object in itself, but a reference to an object just created in memory.
+
+```javascript
+let obj = {}
+
+// internal behavior
+let obj = '89E3N9RJ43J0' // abstract code representing the address of the object in memory
+```
+
+If we assign the `obj` variable to another variable, we are actually creating a new reference for the object in memory.
+
+```javascript
+let obj2 = obj
+
+// internal behavior
+let obj2 = '89E3N9RJ43J0'
+```
+
+When this code snippet is executed `let array = [john]`, we are not literally taking the `john` variable and throwing it into the array, but rather storing a new reference inside the array.
+
+```javascript
+let array = [john]
+
+// internal behavior
+let array = ['89E3N9RJ43J0']
+```
+
+We can imagine each reference to an object in memory as a direct communication channel with it. When we want to extract or add some information from this object, we will contact it through some of its direct communication channels (references).
+
+The `john = null` code snippet is overriding the `john` variable, in other words, it is cutting a communication channel with that object, but it is not changing the object itself. If there are no more references to the object, it will be removed from memory by the Garbage collection.
+
+But we still have a reference to this object in index `0` of our array. Then we can either access it directly, or access one of its properties through this reference.
+
+```javascript
+array[0] // { name: 'John' }
+array[0].name // 'John'
+```

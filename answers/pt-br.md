@@ -210,3 +210,53 @@ Tanto o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Referen
 - Depois de todas as verificações, será retornado o valor `'[object' + tag + ']'`
 
 No exemplo da 7ª questão, o método `Object.prototype.toString` é executado com um `this` do tipo `Array`, sendo assim, ele caiu no primeiro `Se`, e atribuiu o valor `'Array'` a variável `tag`. Por fim ele retornou a string `'[object' + tag + ']'`.
+
+### Questão 8:
+
+```javascript
+let john = { name: 'John' }
+let array = [john]
+
+john = null
+
+array[0].name
+```
+**c)** `'John'`</br>
+
+Quando instaciamos um objeto e atribuimos ele a uma variável, na verdade oque vai ser guardado naquela variável não é um objeto em si, mas sim uma referência para um objeto que acabara de ser criado em memória.
+
+```javascript
+let obj = {}
+
+// comportamento interno
+let obj = '89E3N9RJ43J0' // código abstrato representando o endereço do objeto em memória
+```
+
+Se atribuirmos a variável `obj` a outra variável, na verdade estamos criando uma nova referência para o objeto em memória.
+
+```javascript
+let obj2 = obj
+
+// comportamento interno
+let obj2 = '89E3N9RJ43J0'
+```
+
+Quando esse trecho de código é executado `let array = [john]`, não estamos, literalmente, pegando a variável `john` e jogando dentro do array, mas sim, armazenando uma nova referência dentro do array.
+
+```javascript
+let array = [john]
+
+// comportamento interno
+let array = ['89E3N9RJ43J0']
+```
+
+Podemos imaginar cada referência para um objeto em memória como um canal de comunicação direta com o mesmo. Quando queremos extrair ou adicionar alguma informação desse objeto, iremos entrar em contato com ele através de alguns de seus canais de comunicação direta (referêcias).
+
+O trecho de código `john = null` esta sobrescrevendo a variável `john`, em outras palavras, esta cortando um canal de comunicação com aquele objeto, mas não esta alterando o objeto em si. Se não existir mais nenhuma referência para o objeto, ele será removido da mémoria pelo Garbage collection. 
+
+Mas ainda temos uma referência para esse objeto, no indice `0` do nosso array. Então podemos tanto  acessa-lo diretamente, como acessar uma de suas propriedades através dessa referência.
+
+```javascript
+array[0] // { name: 'John' }
+array[0].name // 'John'
+```
