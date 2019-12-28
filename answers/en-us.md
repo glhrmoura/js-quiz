@@ -252,7 +252,7 @@ let array = ['89E3N9RJ43J0']
 
 We can imagine each reference to an object in memory as a direct communication channel with it. When we want to extract or add some information from this object, we will contact it through some of its direct communication channels (references).
 
-The `john = null` code snippet is overriding the `john` variable, in other words, it is cutting a communication channel with that object, but it is not changing the object itself. If there are no more references to the object, it will be removed from memory by the Garbage collection.
+The code snippet `john = null` is overriding the `john` variable, in other words, it is cutting a communication channel with that object, but it is not changing the object itself. If there are no more references to the object, it will be removed from memory by the Garbage collection.
 
 But we still have a reference to this object in index `0` of our array. Then we can either access it directly, or access one of its properties through this reference.
 
