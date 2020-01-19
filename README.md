@@ -1,4 +1,4 @@
-# JavaScript Quiz :telescope: 
+# :telescope: JavaScript Quiz 
 
 I have compiled some basic JavaScript language questions so developers can test their knowledge, and also learn some nuances of the language from the detailed answers to each question.
 
