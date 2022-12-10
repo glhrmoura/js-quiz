@@ -86,7 +86,7 @@ console.log('log 2: ', firstName, lastName)
 ### 6. What is the value of the object?
 
 ```javascript
-let card = {}
+let card = {};
 
 (['audi','bmw'].map(item => card[item] = undefined), card)
 ```
