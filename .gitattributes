@@ -1,2 +1,2 @@
 * linguist-vendored
-*.md linguist-vendored=false
+*.md linguist-detectable=true
