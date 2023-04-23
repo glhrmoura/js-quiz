@@ -11,13 +11,13 @@ I have compiled some basic JavaScript language questions so developers can test 
 
 The repository is open to contributions, whether new questions or even translations of answers into other languages.
 
-## A few notes about the code
+### A few notes about the code
 
 - Assuming ECMAScript 6;
 - Every snippet is run as a global code;
 - The code is not running in strict mode.
 
-### 1. What is the result?
+#### 1. What is the result?
 
 ```javascript
 ('b'+'a'+ +'a'+'a').toLocaleLowerCase()
@@ -28,7 +28,7 @@ The repository is open to contributions, whether new questions or even translati
 **c)** `'banana'`</br>
 **d)** `'baa'`</br>
 
-### 2. What is the result?
+#### 2. What is the result?
 
 ```javascript
 let num = '10'
@@ -41,7 +41,7 @@ num += num++
 **c)** `'1011'`</br>
 **d)** `21`</br>
 
-### 3. What is the result?
+#### 3. What is the result?
 
 ```javascript
 (function () {
@@ -61,7 +61,7 @@ num += num++
 **c)** `30`</br>
 **d)** `ReferenceError`</br>
 
-### 4. What will be the output value of log 1 and log 2?
+#### 4. What will be the output value of log 1 and log 2?
 
 ```javascript
 function Person (firstName, lastName) {
@@ -80,7 +80,7 @@ console.log('log 2: ', firstName, lastName)
 **c)** `log 1: { firstName: 'Guilherme', lastName: 'Moura'  } | log 2: Guilherme Moura`</br>
 **d)** `log 1: { firstName: 'Guilherme', lastName: 'Moura'  } | ReferenceError`</br>
 
-### 5. What is the result?
+#### 5. What is the result?
 
 ```javascript
 (3,5 - 3) * 2
@@ -91,7 +91,7 @@ console.log('log 2: ', firstName, lastName)
 **c)** `1`</br>
 **d)** `4`</br>
 
-### 6. What is the value of the object?
+#### 6. What is the value of the object?
 
 ```javascript
 let card = {};
@@ -104,7 +104,7 @@ let card = {};
 **c)** `['audi','bmw']`</br>
 **d)** `[{ audi: undefined }, { bmw: undefined }]`</br>
 
-### 7. What is the result?
+#### 7. What is the result?
 
 ```javascript
 Object.prototype.toString.call([1, 2, 3, 4, 5])
@@ -115,7 +115,7 @@ Object.prototype.toString.call([1, 2, 3, 4, 5])
 **c)** `undefined`</br>
 **d)** `'[object Object]'`</br>
 
-### 8. What is the result?
+#### 8. What is the result?
 
 ```javascript
 let john = { name: 'John' }
@@ -131,13 +131,13 @@ array[0].name
 **c)** `'John'`</br>
 **d)** `undefined`</br>
 
-## Check the detailed answers to each question :pencil:
+### Check the detailed answers to each question :pencil:
 
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/pt-br.md" target="_blank">pt-BR</a>
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/en-us.md" target="_blank">en-US</a>
 
 
-## License
+### License
 
 [MIT](https://github.com/glhrmoura/js-quiz/blob/master/LICENSE)
 
