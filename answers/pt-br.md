@@ -132,7 +132,7 @@ Por não estar sendo chamada com a palavra chave `new`, a função contrutora es
 
 Bem, isso responde o por que da variável `person` ser `undefined`, mas porque as variáveis `firstName` e `lastName` são acessiveis fora da função?
 
-Em chamadas comuns de função, a variável `this` dentro da mesma sempre apontara para o objeto global `window`. Isso só deixa de ser verdade quando o código é executado com o `strict mode`, nesse caso, o `this` dentro das funções será `undefined`.
+Em chamadas comuns de função, a variável `this`, dentro da mesma, sempre apontara para o objeto global `window`. Isso só deixa de ser verdade quando o código é executado com o `strict mode`, nesse caso, o `this` dentro das funções será `undefined`.
 
 Como o `strict mode` não esta sendo usado, o `this` detro da função esta apontando para o `window`. É isso que realmente acontece quando a função `Person` é executada:
 
