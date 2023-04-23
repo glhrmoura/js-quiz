@@ -1,3 +1,10 @@
+<p align="center">
+  <img
+    style="object: contain; height: 150px"
+    src="https://raw.githubusercontent.com/glhrmoura/js-quiz/master/images/logo.png"
+  />
+</p>
+
 # JavaScript Quiz 
 
 I have compiled some basic JavaScript language questions so developers can test their knowledge, and also learn some nuances of the language from the detailed answers to each question.
@@ -127,3 +134,10 @@ array[0].name
 
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/pt-br.md" target="_blank">pt-BR</a>
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/en-us.md" target="_blank">en-US</a>
+
+
+### License
+
+[MIT](https://github.com/glhrmoura/js-quiz/blob/master/LICENSE)
+
+Copyright (c) Guilherme Moura
