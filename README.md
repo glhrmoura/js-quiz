@@ -137,7 +137,7 @@ array[0].name
 - <a href="https://github.com/mouraggui/js-quiz/blob/master/answers/en-us.md" target="_blank">en-US</a>
 
 
-### License
+## License
 
 [MIT](https://github.com/glhrmoura/js-quiz/blob/master/LICENSE)
 
